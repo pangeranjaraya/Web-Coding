@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="theme-color" content="#070b18">
+  <meta name="description" content="CodeMaster Academy — buku interaktif pemrograman dan cyber security.">
+  <title>CodeMaster Academy V2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+  <div id="readingProgress" class="reading-progress"></div>
+
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">&lt;/&gt;</div>
+        <div><strong>CodeMaster</strong><span>Learn. Build. Secure.</span></div>
+      </div>
+      <nav class="nav">
+        <button class="nav-item active" data-page="home">⌂ <span>Home</span></button>
+        <button class="nav-item" data-page="features">✦ <span>Feature</span></button>
+        <button class="nav-item" data-page="courses">▣ <span>Pembelajaran</span></button>
+        <button class="nav-item" data-page="security">◈ <span>Cyber Security</span></button>
+        <button class="nav-item" data-page="playground">⌘ <span>Playground</span></button>
+        <button class="nav-item" data-page="progress">◔ <span>Progress</span></button>
+        <button class="nav-item" data-page="contact">✉ <span>Contact</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <button class="nav-item whatsapp" id="whatsappBtn">◉ <span>Join WhatsApp</span></button>
+        <button class="nav-item" id="themeBtn">☾ <span>Tema</span></button>
+        <small>© 2026 CodeMaster Academy</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menuBtn" class="icon-btn" aria-label="Buka menu">☰</button>
+        <div class="topbar-title">
+          <strong id="pageTitle">CodeMaster Academy</strong>
+          <span id="pageSubtitle">Belajar sampai paham ke akar.</span>
+        </div>
+        <div class="top-widgets">
+          <div class="widget"><span class="widget-icon">◷</span><div><strong id="clock">--:--:--</strong><small id="dateText">--</small></div></div>
+          <div class="widget location-widget"><span class="status-dot" id="locationDot"></span><div><strong id="locationName">Mendeteksi lokasi...</strong><small id="coordinates">Meminta izin lokasi</small></div></div>
+        </div>
+      </header>
+      <section id="app" class="content"></section>
+    </main>
+  </div>
+
+  <div id="mobileOverlay" class="overlay"></div>
+  <script src="./lessons.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
